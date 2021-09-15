@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1631561882 source:c:\users\liliana cosmano\desktop\carrera\progra y lab 2\practica\tp-filas\fila.c
+	"Fila.h"
+
+1631746588 c:\users\liliana cosmano\desktop\carrera\progra y lab 2\practica\tp-filas\fila.h
+	<stdio.h>
+

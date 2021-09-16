@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1631561882 source:c:\users\liliana cosmano\desktop\carrera\progra y lab 2\practica\tp-filas\fila.c
+1631756495 source:c:\users\liliana cosmano\desktop\carrera\progra y lab 2\practica\tp-filas\fila.c
 	"Fila.h"
 
-1631746588 c:\users\liliana cosmano\desktop\carrera\progra y lab 2\practica\tp-filas\fila.h
+1631756495 c:\users\liliana cosmano\desktop\carrera\progra y lab 2\practica\tp-filas\fila.h
 	<stdio.h>
+	<stdlib.h>
 
 1631755895 source:c:\users\-\onedrive\escritorio\carrera\año 1 cuatri 2\progra y lab 2\practica\tp-de-filas\fila.c
 	"Fila.h"
@@ -13,6 +14,11 @@
 	<stdlib.h>
 
 1631749369 source:c:\users\-\onedrive\escritorio\carrera\año 1 cuatri 2\progra y lab 2\practica\tp-de-filas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Fila.h"
+
+1631757805 source:c:\users\liliana cosmano\desktop\carrera\progra y lab 2\practica\tp-filas\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Fila.h"

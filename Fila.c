@@ -21,7 +21,9 @@ void agregar (Fila* f, int dato)
 
     if (f->prim) // si fila tiene datos, entonces el primer dato es != null
     {
-
+        f->ult->sig = aux;
+        aux->ant = f->ult;
+        f->ult = aux;
     }
     else // si no hay ningun dato en fila
     {
@@ -30,19 +32,32 @@ void agregar (Fila* f, int dato)
     }
 }
 
-void extraer (Fila*)
+int extraer (Fila* f)
 {
+    int ret = f->prim->dato;
 
+    nodoD* aux = f->prim;
+
+    if (f->prim->sig) // si la fila tiene mas de un dato
+    {
+        f->prim = f->prim->sig;
+        f->prim->ant = NULL;
+    }
+    else
+        inicListaF(f);
+
+    free(aux);
+    return ret;
 }
 
-void primero (Fila)
+int primero (Fila f)
 {
-
+    return f.prim->dato;
 }
 
-void filavacia (Fila)
+int filavacia (Fila f)
 {
-
+    return (f.prim == NULL);
 }
 
 

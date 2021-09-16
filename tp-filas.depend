@@ -8,6 +8,11 @@
 1631749048 source:c:\users\-\onedrive\escritorio\carrera\año 1 cuatri 2\progra y lab 2\practica\tp-de-filas\fila.c
 	"Fila.h"
 
-1631749048 c:\users\-\onedrive\escritorio\carrera\año 1 cuatri 2\progra y lab 2\practica\tp-de-filas\fila.h
+1631750124 c:\users\-\onedrive\escritorio\carrera\año 1 cuatri 2\progra y lab 2\practica\tp-de-filas\fila.h
 	<stdio.h>
+
+1631749369 source:c:\users\-\onedrive\escritorio\carrera\año 1 cuatri 2\progra y lab 2\practica\tp-de-filas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Fila.h"
 

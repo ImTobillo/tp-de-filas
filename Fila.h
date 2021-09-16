@@ -15,11 +15,10 @@ typedef struct
     struct nodoD* ult;
 }Fila;
 
-void inicListaF (Fila);
+void inicListaF (Fila*);
+nodoD* crearNodoD (int dato);
 void agregar (Fila*);
-void extraer (Fila);
-void mostrar (Fila);
-void leer (Fila*);
+void extraer (Fila*);
 void primero (Fila);
 void filavacia (Fila);
 

@@ -3,9 +3,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct
+{
+    int id;
+    int duracion;
+}proceso;
+
+typedef proceso elemento;
+
 typedef struct nodoD
 {
-    int dato;
+    elemento dato;
     struct nodoD* sig;
     struct nodoD* ant;
 }nodoD;
@@ -17,10 +25,10 @@ typedef struct
 }Fila;
 
 void inicListaF (Fila*);
-nodoD* crearNodoD (int dato);
-void agregar (Fila*, int dato);
-int extraer (Fila*);
-int primero (Fila);
+nodoD* crearNodoD (elemento dato);
+void agregar (Fila*, elemento dato);
+elemento extraer (Fila*);
+elemento primero (Fila);
 int filavacia (Fila);
 
 #endif // FILA_H_INCLUDED

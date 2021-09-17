@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include "Fila.h"
 
-void mostrarOrdenLlegada (Fila* f)
+/// ejercicio 1
+/*void mostrarOrdenLlegada (Fila* f)
 {
     Fila aux;
     inicListaF(&aux);
@@ -17,17 +18,55 @@ void mostrarOrdenLlegada (Fila* f)
         agregar (f, extraer(&aux));  /// devolver dnis a fila
 }
 
-void mostrarDesdeUltimo (Fila* f)
+void mostrarDesdeUltimoRec2 (Fila* f, Fila* aux)
+{
+    if (!filavacia(*f))
+    {
+        int dato = primero(*f);
+        agregar(aux, extraer(f));
+        mostrarDesdeUltimoRec2(f, aux);
+        printf("%i\t", dato);
+    }
+}
+
+void mostrarDesdeUltimoRec (Fila* f)
 {
     Fila aux;
     inicListaF(&aux);
 
+    mostrarDesdeUltimoRec2(f, &aux);
 
+    while (!filavacia(aux))
+        agregar(f, extraer(&aux));
 }
+
+void atenderSoloDniPar (Fila* f)
+{
+    Fila aux;
+    inicListaF(&aux);
+
+    int basura;
+
+    while (!filavacia(*f))
+    {
+        if (primero(*f) % 2 == 0)
+            agregar(&aux, extraer(f));
+        else
+            basura = extraer(f);
+    }
+
+    while (!filavacia(aux))
+        agregar(f, extraer(&aux));
+}
+*/
+
+/// ejercicio 2
+
+
 
 int main()
 {
-    Fila dnis;
+    /*Fila dnis;
     inicListaF(&dnis);
 
     agregar(&dnis, 44562987);
@@ -38,6 +77,18 @@ int main()
     agregar(&dnis, 38494034);
 
     mostrarOrdenLlegada(&dnis);
+
+    printf("\n");
+    mostrarDesdeUltimoRec(&dnis);
+
+    atenderSoloDniPar(&dnis);
+
+    printf("\n");
+    mostrarOrdenLlegada(&dnis);
+    */
+
+    Fila procesos;
+    inicListaF(&procesos);
 
 
 

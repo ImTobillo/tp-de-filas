@@ -6,7 +6,7 @@ void inicListaF (Fila* f)
     f->ult = NULL;
 }
 
-nodoD* crearNodoD (int dato)
+nodoD* crearNodoD (elemento dato)
 {
     nodoD* aux = (nodoD*)malloc(sizeof(nodoD));
     aux->dato = dato;
@@ -15,7 +15,7 @@ nodoD* crearNodoD (int dato)
     return aux;
 }
 
-void agregar (Fila* f, int dato)
+void agregar (Fila* f, elemento dato)
 {
     nodoD* aux = crearNodoD(dato);
 
@@ -32,9 +32,9 @@ void agregar (Fila* f, int dato)
     }
 }
 
-int extraer (Fila* f)
+elemento extraer (Fila* f)
 {
-    int ret = f->prim->dato;
+    elemento ret = f->prim->dato;
 
     nodoD* aux = f->prim;
 
@@ -50,7 +50,7 @@ int extraer (Fila* f)
     return ret;
 }
 
-int primero (Fila f)
+elemento primero (Fila f)
 {
     return f.prim->dato;
 }

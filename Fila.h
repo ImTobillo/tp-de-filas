@@ -5,11 +5,17 @@
 
 typedef struct
 {
+    int prioridad;
+    char categoria;
+}peticion;
+
+typedef struct
+{
     int id;
     int duracion;
-}proceso;
+}StProceso;
 
-typedef proceso elemento;
+typedef peticion elemento;
 
 typedef struct nodoD
 {

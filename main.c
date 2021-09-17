@@ -17,12 +17,45 @@ void mostrarOrdenLlegada (Fila* f)
         agregar (f, extraer(&aux));  /// devolver dnis a fila
 }
 
-void mostrarDesdeUltimo (Fila* f)
+void mostrarDesdeUltimoRec2 (Fila* f, Fila* aux)
+{
+    if (!filavacia(*f))
+    {
+        int dato = primero(*f);
+        agregar(aux, extraer(f));
+        mostrarDesdeUltimoRec2(f, aux);
+        printf("%i\t", dato);
+    }
+}
+
+void mostrarDesdeUltimoRec (Fila* f)
 {
     Fila aux;
     inicListaF(&aux);
 
+    mostrarDesdeUltimoRec2(f, &aux);
 
+    while (!filavacia(aux))
+        agregar(f, extraer(&aux));
+}
+
+void atenderSoloDniPar (Fila* f)
+{
+    Fila aux;
+    inicListaF(&aux);
+
+    int basura;
+
+    while (!filavacia(*f))
+    {
+        if (primero(*f) % 2 == 0)
+            agregar(&aux, extraer(f));
+        else
+            basura = extraer(f);
+    }
+
+    while (!filavacia(aux))
+        agregar(f, extraer(&aux));
 }
 
 int main()
@@ -39,7 +72,13 @@ int main()
 
     mostrarOrdenLlegada(&dnis);
 
+    printf("\n");
+    mostrarDesdeUltimoRec(&dnis);
 
+    atenderSoloDniPar(&dnis);
+
+    printf("\n");
+    mostrarOrdenLlegada(&dnis);
 
     return 0;
 }
